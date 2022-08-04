@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/styles/normalize.css">
+    <link rel="preload" href="/src/styles/normalize.css" as="style">
+    <link rel="stylesheet" href="/src/styles/normalize.css"> <!-- libreria que cargue primero  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/src/styles/style.css" as="style">
     <link rel="stylesheet" href="/src/styles/style.css">
     <title>Diseñador Freelancer</title>
 </head>
 <body>
     <header>
-        <h1>Daniel Pinto Freelancer</h1>
+        <h1 class="titulo">Daniel Pinto <span>Freelancer</span></h1>
     </header>
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Sobre Mi</a>
-        <a href="#">Clientes</a>
-        <a href="#">Contacto</a>
-    </nav>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre Mi</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
    <!--  <img src="https://i.ibb.co/kXGzZD4/hero.jpg" alt="hero"> -->
     <section>
-        <h2>Diseño y Desarrollo Freelancer</h2>
+        <h2 class="titulo">Diseño y Desarrollo Freelancer</h2>
 
         <p>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88"
