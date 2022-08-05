@@ -22,10 +22,10 @@
 
     <div class="nav-bg">
         <nav class="navegacion-principal contenedor">
-            <a href="#">Inicio</a>
+            <a href="index.html">Inicio</a>
             <a href="#">Sobre Mi</a>
             <a href="#">Clientes</a>
-            <a href="#">Contacto</a>
+            <a href="#contactame">Contacto</a>
         </nav>
     </div>
     <!--  <img src="https://i.ibb.co/kXGzZD4/hero.jpg" alt="hero"> -->
@@ -42,7 +42,7 @@
                 </svg>
                 <p>Ibagué, Tolima</p>
             </div>
-            <a class="boton" href="#">Contactar</a>
+            <a class="boton" href="#contactame">Contactar</a>
         </div><!-- .contenido-hero -->
     </section>
 
@@ -116,7 +116,7 @@
         </div><!-- .servicios -->
     
         <section>
-            <h2>Contacto</h2>
+            <h2 id="contactame">Contacto</h2>
     
             <form class="formulario" action="#">
                 <fieldset>
@@ -125,24 +125,24 @@
                     <div class="contenedor-campos">
                         <div class="campo">
                         <label for="#">Nombre</label>
-                            <input type="text" placeholder="Tu Nombre">
+                            <input class="input-text" type="text" placeholder="Tu Nombre">
                         </div>
                         <div class="campo">
                             <label for="#">Teléfono</label>
-                            <input type="tel" placeholder="Tu Teléfono">
+                            <input class="input-text" type="tel" placeholder="Tu Teléfono">
                         </div>
                         <div class="campo">
                             <label for="#">Correo</label>
-                            <input type="email" placeholder="Tu Mail">
+                            <input class="input-text" type="email" placeholder="Tu Mail">
                         </div>
                         <div class="campo">
                             <label for="#">Mensaje:</label>
-                            <textarea></textarea>
+                            <textarea class="input-text" placeholder="Escríbeme..."></textarea>
                         </div>
                     </div><!-- .contenedor-campos -->
 
-                    <div>
-                        <input type="submit" value="Enviar">
+                    <div class="alinear-derecha flex">
+                        <input class="boton w-ms-100" type="submit" value="Enviar">
                     </div>
                 </fieldset>
             </form>
