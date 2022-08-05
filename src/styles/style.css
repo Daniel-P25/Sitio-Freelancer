@@ -4,6 +4,7 @@
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #DFE9F3;
 }
 
 /* Globales */
@@ -19,6 +20,7 @@ html {
 body {
     font-size: 16px;/* 1rem = 10px */
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);/* Direccion, y dar colores al degradado */
 }
 .contenedor {
     max-width: 120rem; /* 1200px */
@@ -42,8 +44,16 @@ body {
 @media (min-width: 480px) {
     .boton {
         width: auto;
-
     }
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);/* cssmatic.com */
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 /* Design System */
@@ -121,6 +131,7 @@ h1, h2, h3 {
     background-size: cover;/* tome el espacio disponible*/
     height: 450px;
     position: relative;/* Coordenadas de position adsolute */
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
@@ -144,4 +155,41 @@ h1, h2, h3 {
 .contenido-hero .ubicacion {
     display: flex;
     align-items: flex-end;
+}
+
+/* Servicios */
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr */
+        column-gap: 1rem;/* separación de las columnas */
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: bold; /* 700 */
+    font-size: 2rem;
+}
+
+.servicio p {
+    line-height: 2;/* interlineado */
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;  
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;/* por defecto */
+    justify-content: space-evenly;
+    align-items: center;
 }
